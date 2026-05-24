@@ -5,21 +5,21 @@
 class Ridemapper < Formula
   desc "Self-hosted web service for tracking motorcycle and bicycle rides"
   homepage "https://github.com/andrewslotin/ridemapper"
-  version "1.2.0"
+  version "2.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://dl.slotin.me/ridemapper/v1.2.0/ridemapper_1.2.0_darwin_x86_64.tar.gz"
-      sha256 "b0f078a8a513472e52e5f6bb15e421c1b70061d746e3dab2d306ab422e7d73a8"
+      url "https://dl.slotin.me/ridemapper/v2.0.0/ridemapper_2.0.0_darwin_x86_64.tar.gz"
+      sha256 "4fcae2100a678edbc6f761e9a4703cfb7fc09b3d8887bb21fae01a63c2fd1717"
 
       define_method(:install) do
         bin.install "ridemapper"
       end
     end
     if Hardware::CPU.arm?
-      url "https://dl.slotin.me/ridemapper/v1.2.0/ridemapper_1.2.0_darwin_arm64.tar.gz"
-      sha256 "e641af91b3a015a4c8b6d831df7af047e4ef39908ca7b5cd510f8106d9c1c6af"
+      url "https://dl.slotin.me/ridemapper/v2.0.0/ridemapper_2.0.0_darwin_arm64.tar.gz"
+      sha256 "89ab2dece8736d5e27c520529f7782dcf2cd59af3f1990a4809f2e35ab060028"
 
       define_method(:install) do
         bin.install "ridemapper"
@@ -29,15 +29,15 @@ class Ridemapper < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://dl.slotin.me/ridemapper/v1.2.0/ridemapper_1.2.0_linux_x86_64.tar.gz"
-      sha256 "e4545521673506161b125a03d26fcb017731da02f777d791c45ef6559de46f8a"
+      url "https://dl.slotin.me/ridemapper/v2.0.0/ridemapper_2.0.0_linux_x86_64.tar.gz"
+      sha256 "42601a24abb07f89d56c43685b4c0ac475a9242dfd38be969f40c587967afbf7"
       define_method(:install) do
         bin.install "ridemapper"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.slotin.me/ridemapper/v1.2.0/ridemapper_1.2.0_linux_arm64.tar.gz"
-      sha256 "978de989fe12bfe2254b6893c3346c56937b1c1454541cd360118dd57e81d25c"
+      url "https://dl.slotin.me/ridemapper/v2.0.0/ridemapper_2.0.0_linux_arm64.tar.gz"
+      sha256 "a77497c03e68f2019627a1b3dc8675242a6049d356036de720f94a77e8317bf7"
       define_method(:install) do
         bin.install "ridemapper"
       end
